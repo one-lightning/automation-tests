@@ -14,11 +14,13 @@ public class BaseTests {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/");
+		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
-		driver.quit();
+		//driver.quit();
 	}
 
 	public static void main(String[] args) {
 		BaseTests tests = new BaseTests();
+		tests.RunTest();
 	}
 }

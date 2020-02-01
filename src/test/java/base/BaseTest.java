@@ -10,9 +10,10 @@ public class BaseTest {
 	public void RunTest() {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://google.com/");
+		driver.get("https://the-internet.herokuapp.com/");
+		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
-		driver.close();
+		//driver.close();
 	}
 
 	public static void main(String[] args) {
