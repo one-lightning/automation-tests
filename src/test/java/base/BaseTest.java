@@ -11,7 +11,7 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().maximize();
+		driver.manage().window().fullscreen();
 		System.out.println(driver.getTitle());
 		//driver.close();
 	}
