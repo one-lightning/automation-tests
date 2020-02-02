@@ -1,15 +1,10 @@
 package base;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
-public class BaseTest {
+public class Base_Test {
 
 	private WebDriver driver;
 
@@ -17,22 +12,13 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/");
-		driver.manage().window().fullscreen();
-		
-		List<WebElement> links = driver.findElements(By.tagName("a"));
-		System.out.println(links.size());
-		
-		
-		WebElement inputsLink = driver.findElement(By.linkText("Inputs"));
-		inputsLink.click();
-		
-		
+		driver.manage().window().setSize(new Dimension (375, 812));
 		System.out.println(driver.getTitle());
 		//driver.close();
 	}
 
 	public static void main(String[] args) {
-		BaseTest tests = new BaseTest();
+		Base_Test tests = new Base_Test();
 		tests.RunTest();
 	}
 }
