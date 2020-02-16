@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTests {
 
-	private WebDriver driver;
+	public WebDriver driver;
 
 	
 	public void RunTest() {
